@@ -1,0 +1,32 @@
+{
+  "name": "parkedproject.com",
+  "version": "0.0.0",
+  "description": "Domain parking for projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "envigorate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parkedproject/parkedproject.com.git"
+  },
+  "author": "Stuart P. Bentley <stuart@testtrack4.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/parkedproject/parkedproject.com/issues"
+  },
+  "homepage": "https://github.com/parkedproject/parkedproject.com",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "connect-redis": "^2.3.0",
+    "endex": "^0.1.1",
+    "envigor": "^0.9.0",
+    "express": "^4.12.4",
+    "express-session": "^1.11.2",
+    "jade": "^1.9.2",
+    "redis": "^0.12.1",
+    "rethinkdb": "^2.0.0-1",
+    "serve-static": "^1.9.3"
+  }
+}
