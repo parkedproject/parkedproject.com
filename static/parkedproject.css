@@ -22,7 +22,7 @@ h1 {
 footer {
   background-color: rgba(0,0,0,0.9);
   text-align: right;
-  padding: 16px;
+  padding: 8px 16px;
   font-size: 20px;
 }
 a, a:link, a:visited {
@@ -31,9 +31,9 @@ a, a:link, a:visited {
 .brandlink {
   font-weight: bold;
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: 6px;
 }
 .brandlink img {
   vertical-align: bottom;
-  margin-left: 10px;
+  margin-left: 6px;
 }
