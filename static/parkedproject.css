@@ -1,11 +1,12 @@
 html {
   height: 100%;
+  color: white;
+  font-family: Open Sans, sans-serif;
 }
 body {
   height: 100%;
   display: flex;
   flex-flow: column;
-  color: white;
 }
 main {
   flex: 1;
