@@ -7,6 +7,7 @@ var r = require('rethinkdb');
 var endex = require('endex');
 
 module.exports = function appctor(cfg) {
+  var mainDomain = cfg.env.CANONICAL_HOST || 'www.parkedproject.com';
   var conn;
 
   r.connect(cfg.rethinkdb).then(function (connection) {
@@ -21,6 +22,14 @@ module.exports = function appctor(cfg) {
   }
 
   var app = express();
+  app.use(function yesCanonicalWww(req, res, next) {
+    if (mainDomain.slice(0,4) == 'www.' &&
+      req.hostname == mainDomain.slice(4)) {
+
+      return res.redirect(301,
+        req.protocol + '://' + mainDomain + req.originalUrl);
+    } else return next();
+  });
   app.use(serveStatic(__dirname + '/static'));
   app.use(session({
     store: new RedisStore({
@@ -40,7 +49,7 @@ module.exports = function appctor(cfg) {
 
   app.get('/', function (req, res) {
     res.render('parking.jade',{
-      title: req.hostname,
+      title: req.hostname.replace(/^www\./,''),
       headline: 'Coming soon'
     });
   });
