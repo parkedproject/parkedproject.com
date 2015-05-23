@@ -22,6 +22,7 @@ module.exports = function appctor(cfg) {
   }
 
   var app = express();
+  app.set('trust proxy',true);
   app.use(function yesCanonicalWww(req, res, next) {
     if (mainDomain.slice(0,4) == 'www.' &&
       req.hostname == mainDomain.slice(4)) {
@@ -48,7 +49,9 @@ module.exports = function appctor(cfg) {
   app.use(bodyParser.urlencoded({ extended: false }));
 
   app.get('/', function (req, res) {
-    res.render('parking.jade',{
+    if (req.hostname == mainDomain)
+      return res.render('index.jade');
+    else return res.render('parking.jade',{
       title: req.hostname.replace(/^www\./,''),
       headline: 'Coming soon'
     });
