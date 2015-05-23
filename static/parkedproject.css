@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  color: white;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.8);
+}
+h1 {
+  text-align: center;
+}
+footer {
+  background-color: rgba(0,0,0,0.9);
+  text-align: right;
+  padding: 1em;
+}
+a, a:link, a:visited {
+  color: white;
+}
