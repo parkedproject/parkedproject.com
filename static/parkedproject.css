@@ -31,10 +31,10 @@ a, a:link, a:visited {
 .brandlink {
   font-weight: bold;
   text-decoration: none;
-  margin-left: 6px;
-  padding-right: 38px;
+  margin-left: 0.25em;
+  padding-right: 2em;
   background-image: url("/parkedproject-logo.svg");
   background-position: right;
-  background-size: 27px;
+  background-size: auto 100%;
   background-repeat: no-repeat;
 }
