@@ -26,7 +26,7 @@
     "express-session": "^1.11.2",
     "jade": "^1.9.2",
     "redis": "^0.12.1",
-    "rethinkdb": "^2.0.0-1",
+    "rethinkdb": "^2.0.0",
     "serve-static": "^1.9.3"
   }
 }
